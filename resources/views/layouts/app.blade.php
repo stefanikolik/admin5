@@ -17,23 +17,12 @@
 </head>
 <body>
 		@include('content.nav')
-
-	<div id="app">
-		<div style="
-/*			width: 20%;
-			float: left;
-			background-color: #fff;
-			height: 100%;
-			overflow: hidden; */
-		">
-			@include('content.sidebar')
-		</div>
-
-
-		
+		<hr>
+	
+		@include('content.sidebar')
+			
 		@yield('content')
-	</div>
-
+	
 	<!-- Scripts -->
 	<script src="{{ asset('js/app.js') }}"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
