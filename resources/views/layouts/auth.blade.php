@@ -16,23 +16,10 @@
 	
 </head>
 <body>
+		
 		@include('content.nav')
 
-	<div id="app">
-		<div style="
-/*			width: 20%;
-			float: left;
-			background-color: #fff;
-			height: 100%;
-			overflow: hidden; */
-		">
-			@include('content.sidebar')
-		</div>
-
-
-		
 		@yield('content')
-	</div>
 
 	<!-- Scripts -->
 	<script src="{{ asset('js/app.js') }}"></script>

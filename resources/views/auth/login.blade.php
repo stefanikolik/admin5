@@ -1,69 +1,74 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+	<div class="columns is-centered">
+		<div class="column  is-half">
+			
+	
+		<form class="" method="POST" action="{{ route('login') }}">
+			{{ csrf_field() }}
+			
+			<div class="field">
+			 	<label class="label">Е-маил</label>
+				<div class="control has-icons-left has-icons-right">
+					<input id="email" type="email" class="input" name="email" value="{{ old('email') }}" required autofocus>
+					<span class="icon is-small is-left">
+					  <i class="fas fa-envelope"></i>
+					</span>
+					<span class="icon is-small is-right">
+					  <i class="fas fa-check"></i>
+					</span>
+				</div>
+			  	@if ($errors->has('email'))
+					<p class="help is-danger">{{ $errors->first('email') }}</p>
+				@endif
+			</div>
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
+			<div class="field">
+				<label class="label">Лозинка</label>
+				
+				<p class="control has-icons-left">
+					<input id="password" type="password" class="input" name="password" required>
+					<span class="icon is-small is-left">
+						<i class="fas fa-lock"></i>
+					</span>
+				</p>
+			  	
+			  	@if ($errors->has('password'))
+					<p class="help">{{ $errors->first('password') }}</p>
+				@endif
+			</div>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+			<div class="field">
+			  <p class="control">
+				<button type="submit" class="button is-success">
+				  Логирај се
+				</button>
+			  </p>
+			</div>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+	<!-- <a class="btn btn-link" href="{{ route('password.request') }}"></a> -->
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+			<div class="has-text-right">
+				
+				<div class="dropdown is-right is-hoverable ">
+					<div class="dropdown-trigger">	
+						<a href="#" aria-haspopup="true" aria-controls="dropdown-menu4">
+								Заборавена лозинка?
+						</a>
+					</div>
+					<div class="dropdown-menu" id="dropdown-menu4" role="menu">
+						<div class="dropdown-content">
+							<div class="dropdown-item">
+								<p>Контактирајте го систем администраторот</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+			</div>
+	</div>
 </div>
 @endsection
