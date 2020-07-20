@@ -16,8 +16,9 @@
 	
 </head>
 <body>
-		
-		@include('content.nav')
+		<br>
+		<br>
+		<br>
 
 		@yield('content')
 
