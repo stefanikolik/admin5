@@ -1,17 +1,10 @@
-<aside class="menu column" style="float: left;">
-	<p class="menu-label">
-		Мени
-	</p>
-	
-	<br>
+	<div class="header item">Вести</div>
+	<div class="menu">
+			<a class="item">
+				<i class="grid layout icon"></i>Додади
+			</a>
+			<a class="item">
+				Листај
+			</a>
+	</div>
 
-	<ul class="menu-list">
-		<li>Вести</li>
-			<li>
-				<ul>
-					<li><a>Додади</a></li>
-					<li><a>Листај</a></li>
-				</ul>
-			</li>
-	</ul>
-</aside>

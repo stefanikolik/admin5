@@ -12,19 +12,33 @@
 
 	<!-- Styles -->
 	<!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+	<link href="{{ asset('css/normalize.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/semanticUI/semantic.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/semanticUI/calendar.min.css') }}" rel="stylesheet">
 	
 </head>
-<body>
-		@include('content.nav')
-		<hr>
-	
-		@include('content.sidebar')
+<body>				
+		<div class="ui inverted left visible vertical large fixed menu sidebar">
+			@include('content.nav')
 			
-		@yield('content')
-	
+			@include('content.sidebar') 
+		</div>	
+
+		<div class="pusher ">
+			@yield('content')
+		</div>
+
 	<!-- Scripts -->
+	<script
+		src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		crossorigin="anonymous"></script>
+
 	<script src="{{ asset('js/app.js') }}"></script>
-	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<script src="{{ asset('js/semanticUI/semantic.js') }}"></script>
+	<script src="{{ asset('js/semanticUI/calendar.min.js') }}"></script>
+	<script src="{{ asset('js/my.js') }}"></script>
+
+
 </body>
 </html>
