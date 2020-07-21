@@ -17,7 +17,7 @@ class VestiController extends Controller
     }
 
     public function index(){
-        return view('structure.vesti.page');
+        return view('structure.vesti.list');
     }
 
     /**
@@ -27,6 +27,7 @@ class VestiController extends Controller
      */
     public function create()
     {
+        return view('structure.vesti.page');
         //
     }
 

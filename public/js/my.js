@@ -1,11 +1,18 @@
 
 $('#example1').calendar();
 
-$('select.dropdown')
+$('#select')
   .dropdown()
 ;
 
+$('.ui.checkbox')
+  .checkbox()
+;
 
-// $('.ui.sidebar')
-//   .sidebar('toggle')
-// ;
+$('.ui.dropdown')
+  .dropdown()
+;
+
+	// $('.ui.sidebar')
+	//   .sidebar('toggle')
+	// ;

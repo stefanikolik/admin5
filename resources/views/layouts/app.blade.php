@@ -16,6 +16,7 @@
 	<link href="{{ asset('css/semanticUI/semantic.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/semanticUI/calendar.min.css') }}" rel="stylesheet">
 	
+	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>				
 		<div class="ui inverted left visible vertical large fixed menu sidebar">
@@ -24,7 +25,7 @@
 			@include('content.sidebar') 
 		</div>	
 
-		<div class="pusher ">
+		<div class="pusher">
 			@yield('content')
 		</div>
 
@@ -38,7 +39,6 @@
 	<script src="{{ asset('js/semanticUI/semantic.js') }}"></script>
 	<script src="{{ asset('js/semanticUI/calendar.min.js') }}"></script>
 	<script src="{{ asset('js/my.js') }}"></script>
-
 
 </body>
 </html>
