@@ -17,6 +17,20 @@
 	<link href="{{ asset('css/semanticUI/calendar.min.css') }}" rel="stylesheet">
 	
 	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <!-- Javascript -->
+      <script>
+         $(function() {
+            $( "#datepicker-11" ).datepicker();
+         });
+      </script>
+
+
 </head>
 <body>				
 		<div class="ui inverted left visible vertical large fixed menu sidebar">
@@ -29,16 +43,20 @@
 			@yield('content')
 		</div>
 
-	<!-- Scripts -->
-	<script
+
+
+
+
+<!-- 	<script
 		src="https://code.jquery.com/jquery-3.1.1.min.js"
 		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-		crossorigin="anonymous"></script>
+		crossorigin="anonymous"></script> -->
 
+<!-- 	
 	<script src="{{ asset('js/app.js') }}"></script>
+ -->
 	<script src="{{ asset('js/semanticUI/semantic.js') }}"></script>
 	<script src="{{ asset('js/semanticUI/calendar.min.js') }}"></script>
 	<script src="{{ asset('js/my.js') }}"></script>
-
 </body>
 </html>

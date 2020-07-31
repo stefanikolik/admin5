@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::resource('vesti', 'VestiController');
+Route::resource('horoskop', 'HoroskopController');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
