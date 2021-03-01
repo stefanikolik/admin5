@@ -18,6 +18,13 @@
 	
 	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
+	<!-- ruska media  -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
+	<script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
+	<!--  -->
+	
 <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
          rel = "stylesheet">
       <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>

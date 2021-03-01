@@ -18,27 +18,25 @@
 			</tr>
 		  </thead>
 		  <tbody>
-		    <tr>
-		      <td>John</td>
-		      <td>Approved</td>
-		      <td>None</td> <td>John</td>
-		      <td>Approved</td>
-		      <td>None</td>
-		    </tr>
-		    <tr>
-		      <td>Jamie</td>
-		      <td>Approved</td>
-		      <td>Requires call</td><td>Jamie</td>
-		      <td>Approved</td>
-		      <td>Requires call</td>
-		    </tr>
-		    <tr>
-		      <td>Jill</td>
-		      <td>Denied</td>
-		      <td>None</td> <td>Jill</td>
-		      <td>Denied</td>
-		      <td>None</td>
-		    </tr>
+		    @foreach ($posts as $post)
+			    <tr>
+			    	
+
+			      <td></td>
+
+			      
+			      <td>{{$post->naslov}}</td>
+			      <td>{!! $post->story_short !!}</td> 
+			      <td>{{$post->datum}}</td>
+				<td>
+			      	<button class="ui primary button">Објави</button>
+					<button class="ui button">Промени</button>
+				</td>
+			    	<td>
+			      		<div class="ui slider checkbox"><input type="radio" name="throughput" checked="checked"></div>
+  					</td>
+			    </tr>
+		    @endforeach
 		  </tbody>
 		</table>
 	</div>

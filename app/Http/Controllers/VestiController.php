@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+use App\Models\Novosti;
+use App\Models\Kategorii;
 
 class VestiController extends Controller
 {
@@ -17,7 +21,14 @@ class VestiController extends Controller
     }
 
     public function index(){
-        return view('structure.vesti.list');
+
+        $posts = Novosti::where('published', 1)
+                    ->orderBy('datum', 'DESC')
+                    ->paginate(16);
+
+        return view('structure.vesti.list')
+            ->with('posts',$posts);
+
     }
 
     /**

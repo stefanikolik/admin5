@@ -51,17 +51,43 @@
 				</div>
 			</div>
 		
-			<div class="row">
+			
 				<div class="sixteen wide column">
+
+					<div class="field">
+						<label>Мала слика</label>
+						<input name="litlePhoto" placeholder="url" type="text">
+					</div>
+
+
 					<div class="field">
 						<label>Вовед</label>
 						<textarea></textarea>
 					</div>
-				</div>
 
+					<div class="field">
+							<label>Текст</label>
+							<textarea></textarea>
+						</div>
+					
+					<div class="field">
+						<label>Голема слика</label>
+						<input name="bigPhoto" placeholder="url" type="text">
+					</div>
+
+
+					<div class="field">
+						<label>Видео код</label>
+						<input name="video" placeholder="url" type="text">
+					</div>
+
+				</div>
 				
-			</div>
-		</div>	
+<button class="ui primary button" style="float: right;">
+  Save
+</button>
+
+		</div>
 </form>
 
 @endsection
